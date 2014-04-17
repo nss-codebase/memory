@@ -94,7 +94,6 @@
     var opacity = $('body').css('opacity') * 1;
     opacity -= 0.1;
     $('body').css('opacity', opacity);
-    console.log(opacity);
   }
 
   function results(){

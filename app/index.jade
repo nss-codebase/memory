@@ -10,13 +10,13 @@ html(lang='en')
   body
     #controls
       button#start Start Game
-      #clock(data-time='60') 60
+      #clock(data-time='600') 600
 
     table#board
       tbody
         - for(var i = 0; i < 5; i++)
           tr
-            -for(var j = 0; j < 4; j++)
+            - for(var j = 0; j < 4; j++)
               td
                 .flipper
                   .front
