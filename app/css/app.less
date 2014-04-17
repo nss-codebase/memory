@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-  background-image: url('../media/bg.svg');
+  background-image: url('../media/memory.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -12,43 +12,60 @@ html, button, input, select, textarea,
   font-family: 'Open Sans', sans-serif;
 }
 
-.button-success,
-.button-error,
-.button-warning,
 .button-secondary {
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.button-success {
-  background: rgb(82, 227, 101);
-}
-
-.button-error {
-  background: rgb(210, 115, 78);
-}
-
-.button-warning {
-  background: rgb(223, 117, 20);
-}
-
 .button-secondary {
   background: rgba(108, 67, 223, 0.55);
 }
 
-.button-xsmall {
-  font-size: 50%;
-}
-
-.button-small {
-  font-size: 85%;
-}
-
-.button-large {
-  font-size: 110%;
-}
-
 .button-xlarge {
   font-size: 150%;
+}
+
+#controls{
+  padding: 10px;
+}
+
+#clock{
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#board td{
+  border: 1px dashed #24221c;
+  -webkit-perspective: 500;
+  width: 125px;
+  height: 125px;
+
+  .flipper{
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition-duration: 1s;
+    width: 100%;
+    height: 100%;
+
+    .front, .back{
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    .front{
+      z-index: 2;
+    }
+
+    .back{
+      background-size: cover;
+      -webkit-transform: rotateY(180deg);
+    }
+  }
+}
+
+.rotate{
+  -webkit-transform: rotateY(180deg);
 }
