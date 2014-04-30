@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  background-image: url('../media/memory.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: 'Open Sans', sans-serif;
+}
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-secondary {
+  background: rgba(108, 67, 223, 0.55);
+}
+.button-xlarge {
+  font-size: 150%;
+}
+#controls {
+  padding: 10px;
+}
+#clock {
+  margin-left: 10px;
+  display: inline-block;
+}
+#board td {
+  border: 1px dashed #24221c;
+  -webkit-perspective: 500;
+  width: 125px;
+  height: 125px;
+}
+#board td .flipper {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition-duration: 1s;
+  width: 100%;
+  height: 100%;
+}
+#board td .flipper .front,
+#board td .flipper .back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+#board td .flipper .front {
+  z-index: 2;
+}
+#board td .flipper .back {
+  background-size: cover;
+  -webkit-transform: rotateY(180deg);
+}
+.rotate {
+  -webkit-transform: rotateY(180deg);
+}
